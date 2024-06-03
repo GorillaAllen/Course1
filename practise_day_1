@@ -1,0 +1,22 @@
+package root_calculator;
+
+public class Sqr_root_calculator {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+	byte x = 127;
+//	final int sum_41;
+//	sum_41 = 42;
+//	int a = 15;
+//	byte b;
+//	b = (byte) a;
+//	System.out.println(+b);
+	final double PI = 3.1415926;
+	double r, area;
+	r = 5.56;
+	area = PI*r*r;
+	System.out.println("Area if the circle is " +area);
+	
+	}
+
+}
