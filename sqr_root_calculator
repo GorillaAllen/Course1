@@ -1,0 +1,39 @@
+import java.util.Scanner;
+
+public class sqr_root_calculator {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int x; //the number to find square root
+		double sqr_root = 0;
+		Scanner s=new Scanner(System.in);
+		System.out.println ("Enter the interger and find its square root: ");
+		x = s.nextInt();
+		
+		for(int i = 0; i*i < x ; i += 1 ) {
+			sqr_root = i;
+		}
+		
+		if(sqr_root*sqr_root == x) {
+			System.out.println ("square root of:" +x + "is" + sqr_root);
+		}
+		else {
+			sqr_root -= 1;
+			for(double i = 0; i*i < x ; i += 0.1 ) {
+				sqr_root = i;
+			}
+		}
+		if(sqr_root*sqr_root == x) {
+				System.out.println ("square root of:" +x + "is" + sqr_root);
+		}
+		else {
+			sqr_root -= 0.1;
+			for(double i = 0; i*i < x ; i += 00.1 ) {
+				sqr_root = i;
+			}
+		}	
+			System.out.println ("square root of:" +x + "is roughly: " + sqr_root);
+			s.close();
+	}
+		
+}
