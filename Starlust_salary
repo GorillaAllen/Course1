@@ -1,0 +1,61 @@
+//請幫星X航空公司建立一套薪資管理系統。
+//允許輸入多筆員工資料(至多30位)
+//（員工代號、姓名、服務部門、底薪與職務加級）
+//印出員工薪資表如下
+//員工代號、姓名、服務部門、薪資總額、扣繳稅額（= 總額 * 0.1）
+//應領金額（= 薪資總額 – 扣繳稅額）。
+import java.util.Scanner;
+
+class Imployee{
+	String serial_num, name, which_department;
+	int salary_minimum, award;
+	double tax, salary_post_tax;
+	
+
+	Imployee(){
+	}
+	
+	void show_salary() {
+		//員工代號、姓名、服務部門、薪資總額、扣繳稅額（= 總額 * 0.1）
+		System.out.printf("員工代號:%s 姓名:%s 服務部門:%s 薪資總額:%d 扣繳稅額:%.1f\n",
+		serial_num, name, which_department,salary_minimum+award, (double)(salary_minimum+award)*0.1);
+		System.out.printf("應領金額:%.0f",salary_minimum+award - (double)(salary_minimum+award)*0.1);
+	}
+
+	
+}
+
+public class Starlux_salary {
+
+	public static void main(String[] args) {
+		//（員工代號、姓名、服務部門、底薪與職務加級）
+		int num;//欲計算的員工數
+		
+		System.out.println("您想計算幾位員工薪資?請輸入: ");
+		Scanner s = new Scanner(System.in);
+		num = s.nextInt();
+		System.out.println("已建立"+num+"位員工空白資料");
+		Imployee imp[] = new Imployee[num];//宣告這個物件矩陣
+		
+		for(int i=0; i< imp.length; i++) {
+			imp[i] =new Imployee();//初始化每個物件
+		System.out.println("請輸入員工代號");
+		imp[i].serial_num = s.next();
+		System.out.println("請輸入員工姓名");
+		imp[i].name = s.next();
+		System.out.println("請輸入員工服務部門");
+		imp[i].which_department = s.next();
+		System.out.println("請輸入員工底薪");
+		imp[i].salary_minimum = s.nextInt();
+		System.out.println("請輸入員工職務加級");
+		imp[i].award = s.nextInt();
+		}
+		
+		for(int i=0; i< imp.length; i++) {
+			imp[i].show_salary();
+				
+		}
+		s.close();
+	}
+
+}
