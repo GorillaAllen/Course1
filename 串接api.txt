@@ -1,0 +1,7 @@
+比較常用來串接 API 的四種方法：Ajax、jQuery Ajax、Fetch API 和 Axios 
+
+https://pretalx.com/jcconf-2023/talk/HGHRJ7/
+https://ithelp.ithome.com.tw/articles/10314202
+https://codegym.cc/tw/groups/posts/tw.301.di-5-bu-fen-servlet-he-java-servlet-api-bian-xie-yi-ge-jian-dan-de-web-ying-yong-cheng-xu
+
+https://codelove.tw/@tony/post/Ja6JaO
